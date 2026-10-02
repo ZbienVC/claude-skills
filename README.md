@@ -8,6 +8,7 @@ Zach's own Claude skills and a Claude Code agent pack. The goal of everything he
 |---|---|
 | `.claude/skills/model-router/` | Picks the cheapest model and effort level that still gets top quality, and sends side work to the right helper. |
 | `.claude/skills/handoff/` | Tells you when to stay, compact, start a fresh chat, or move to Claude Code, and writes the handoff for you. |
+| `.claude/skills/no-ai-slop/` | Edits a draft so it sounds like a person wrote it, or flags the AI-slop lines without rewriting. Adapted from Peter Yang's no-ai-slop (MIT). |
 | `agents/` | Four Claude Code helpers (subagents), each locked to a model and effort level. |
 
 ## The agent pack
