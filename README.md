@@ -9,6 +9,9 @@ Zach's own Claude skills and a Claude Code agent pack. The goal of everything he
 | `.claude/skills/model-router/` | Picks the cheapest model and effort level that still gets top quality, and sends side work to the right helper. |
 | `.claude/skills/handoff/` | Tells you when to stay, compact, start a fresh chat, or move to Claude Code, and writes the handoff for you. |
 | `.claude/skills/no-ai-slop/` | Edits a draft so it sounds like a person wrote it, or flags the AI-slop lines without rewriting. Adapted from Peter Yang's no-ai-slop (MIT). |
+| `.claude/skills/steerable-3d-scene/` | Builds a 3D view you can steer with a mouse, a trackpad or two thumbs (spin, tilt, pinch, twist, a button pad), with readable name tags. Includes the engine from the Switchyard redesign. |
+| `.claude/skills/data-city-map/` | Decides what a 3D map means: shape = kind, size = amount of code, color = group, color strength = how recently touched. The Switchyard "city" rules. |
+| `.claude/skills/command-center-screens/` | Layouts for status, inbox and crew pages that answer "what is wrong and what do I do first" fast: ranked lists, flick cards, one gauge strip. |
 | `agents/` | Four Claude Code helpers (subagents), each locked to a model and effort level. |
 
 ## The agent pack
