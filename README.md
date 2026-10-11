@@ -13,6 +13,7 @@ Zach's own Claude skills and a Claude Code agent pack. The goal of everything he
 | `.claude/skills/data-city-map/` | Decides what a 3D map means: shape = kind, size = amount of code, color = group, color strength = how recently touched. The Switchyard "city" rules. |
 | `.claude/skills/command-center-screens/` | Layouts for status, inbox and crew pages that answer "what is wrong and what do I do first" fast: ranked lists, flick cards, one gauge strip. |
 | `agents/` | Four Claude Code helpers (subagents), each locked to a model and effort level. |
+| `hooks/canopy-skill-use.mjs` | Tells Canopy each time Claude Code loads a skill, so you can see which skills get used. |
 
 ## The agent pack
 
@@ -38,6 +39,33 @@ If the Haiku `Explore` ever starts missing things, delete `Explore.md` and Claud
 ## Install the skills
 - **claude.ai**: save them from Settings, or from the skill card in the chat where they were made.
 - **Claude Code**: they load on their own when you work inside this repo. To use them everywhere, copy each skill folder into `~/.claude/skills/`.
+
+## Skill-use hook (Claude Code)
+
+`hooks/canopy-skill-use.mjs` tells Canopy every time Claude Code loads a skill, so Canopy can show which skills you actually use and which never earn their keep. It gives up after 3 seconds and never blocks Claude.
+
+Set it up once per computer:
+
+1. Copy `hooks/canopy-skill-use.mjs` to `~/.claude/hooks/` (Windows: `C:\Users\<you>\.claude\hooks\`).
+2. Add this to `~/.claude/settings.json` (merge it with anything already there). The key is the same `CANOPY_KEY` set on Switchyard in Railway.
+
+```json
+{
+  "env": {
+    "CANOPY_URL": "https://switchyard-production-02d8.up.railway.app",
+    "CANOPY_KEY": "paste the CANOPY_KEY here"
+  },
+  "hooks": {
+    "PostToolUse": [
+      { "matcher": "Skill", "hooks": [{ "type": "command", "command": "node ~/.claude/hooks/canopy-skill-use.mjs" }] }
+    ]
+  }
+}
+```
+
+3. Restart Claude Code. Uses show up in Canopy (ask Claude "which skills do I actually use", or look for "Used Nx" on a skill card).
+
+Claude chats on claude.ai have no hooks, so there the skill router calls `canopy_log_use` at the end of a job instead.
 
 ## Rules for anything added here
 - Ninth grade reading level. Define technical terms in the same sentence.
