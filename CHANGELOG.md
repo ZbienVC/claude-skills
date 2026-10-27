@@ -2,6 +2,9 @@
 
 A running list of what changed in this repo and when. Newest entries go at the top.
 
+## 2026-10-27
+- Added the Sharpen skill (`.claude/skills/sharpen/`): finds the vague phrases in a request, offers 3 exact options plus 1 wildcard for each, and writes a brief in 2 rounds. Includes a starter library across motion, timing, scroll, screens, surface, interaction, 3D and architecture, a house rules file format, a glossary format and a "sharpen a skill" mode. Scored 100 in Canopy.
+
 ## 2026-10-14
 - Added this changelog so changes to skills, agents and hooks are easy to track over time.
 
