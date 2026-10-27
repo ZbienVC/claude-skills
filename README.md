@@ -12,6 +12,7 @@ Zach's own Claude skills and a Claude Code agent pack. The goal of everything he
 | `.claude/skills/steerable-3d-scene/` | Builds a 3D view you can steer with a mouse, a trackpad or two thumbs (spin, tilt, pinch, twist, a button pad), with readable name tags. Includes the engine from the Switchyard redesign. |
 | `.claude/skills/data-city-map/` | Decides what a 3D map means: shape = kind, size = amount of code, color = group, color strength = how recently touched. The Switchyard "city" rules. |
 | `.claude/skills/command-center-screens/` | Layouts for status, inbox and crew pages that answer "what is wrong and what do I do first" fast: ranked lists, flick cards, one gauge strip. |
+| `.claude/skills/sharpen/` | Turns vague words in a request ("a swirl thing", "make it pop") into exact terms you pick from, then writes a precise brief to build from. Also sharpens a skill's own instructions with you. Comes with a starter library, a per-project house rules file (`SHARPEN.md`) and a glossary format. |
 | `agents/` | Four Claude Code helpers (subagents), each locked to a model and effort level. |
 | `hooks/canopy-skill-use.mjs` | Tells Canopy each time Claude Code loads a skill, so you can see which skills get used. |
 
