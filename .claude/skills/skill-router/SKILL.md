@@ -10,9 +10,9 @@ Zach has hundreds of skills plus a stack of connectors and repos. He does not wa
 ## The rules
 
 1. **If a skill adds value, use it.** Zach's standing rule: whenever a skill, connector or repo could improve the result or speed up the work, use it. Do not hold back to save effort. The only reason to leave a fitting skill out is that another skill already covers the same job better, or it would change nothing.
-2. **Look up, do not guess.** Find the task's lane in the tables below and use its skills. When no lane fits, read skill descriptions (Canopy's `canopy_find` helps) and say so in the receipt.
+2. **Look up, do not guess.** Find the task's lane in the lookup tables (listed below) and use its skills. When no lane fits, read skill descriptions (Canopy's `canopy_find` helps) and say so in the receipt.
 3. **A skill that needs a connector only counts if the connector is live.** If its tools are not in this session, use the fallback in the same row.
-4. **Parked packs ask first.** Some packs are switched off on purpose (list below). When a job matches one, say which pack and why in one line, and ask "switch it on?" Never pretend a parked skill ran.
+4. **Parked packs ask first.** Some packs are switched off on purpose (see `references/parked.md`). When a job matches one, say which pack and why in one line, and ask "switch it on?" Never pretend a parked skill ran.
 5. **Teach as you go.** Every time you name a skill, add 6 to 10 plain words on what it is good for.
 
 Tie-breaks when two skills do the same job: Zach's own skills, then a skill backed by a connected tool, then a partner plugin, then a generic built-in.
@@ -35,110 +35,22 @@ End every reply that used a skill with one line:
 
 If a skill was loaded but changed nothing, say that too. When the Canopy connector is in the session, also send the receipt to `canopy_log_use` (one row per skill: name, what it did, `changed: false` when it changed nothing). In Claude Code, a hook logs uses automatically, so only the line is needed.
 
----
+## Recipes come first
+If the job matches a recipe in `references/recipes.md`, follow it step by step: shipping a feature in one of Zach's apps, starting a new product idea, or something broken in a live app. Recipes have a short "small run" for jobs of about an hour or less.
 
-## Parked packs (switched off on purpose)
-| Pack | Switch on for |
-|---|---|
-| Sales | Herd work: lead routing, outreach, deal reviews |
-| Content intelligence (Adology) | Hookline and GrowthOS research on hooks, creators, audiences |
-| Adobe for creativity | Photo batch edits and resizing for Reflect Medical marketing |
-| Legal | Contracts, the Reflect sale, operating agreements |
-| AITOPIA | Hookline video, tested against what Hookline already makes |
-| Atria, AdMakeAI | Ad research and Meta ads for GrowthOS clients |
-| Customer support | Support desks once an app has users |
-| Blueprint Studio | Brand image sets for Reflect or GrowthOS clients |
-| Appllama | Zach's first phone app |
-| 21st | Fast screen prototypes from ready-made parts |
-| Abracadabrax, ManyMotions | AI video, music and presenter videos for Hookline |
+## The lookup tables (read only the one you need)
+- `references/lanes-design.md`: anything Zach will look at (pages, apps, dashboards, 3D, images, video, print, art, Figma, design checks).
+- `references/lanes-other.md`: writing, research, planning, finance and ops, engineering, workflows.
+- `references/parked.md`: when a job might match a pack that is switched off on purpose.
+- `references/recipes.md`: step-by-step skill plans for the 3 recipes above.
 
-Removed for good: Zoom, Unity, Productivity.
+Open one file, find the lane, and stop reading. Do not load them all for one task.
 
-## Lane table: design and visual work
+## Safety valve
+Receipts are evidence. Before using a skill, check Canopy (`canopy_usage`) when it is in the session: if that skill was logged as "changed nothing" twice on the same kind of task, skip it for this task type and say so in the receipt ("Skipped: X, changed nothing the last 2 times on this kind of task"). Zach can say "bring it back" anytime.
 
-**Every design lane starts and ends with `design-taste`:** read the taste lists before, ask for a quick rating after.
-
-**A. "I don't know exactly what I want yet."**
-- `sharpen` (turns feel words into exact picks), then `crucible-studio` (three directions tuned to Zach's taste).
-- In Claude Code with Atelier: Atelier's "show me directions" path.
-- End with Zach picking a direction. Do not build first.
-- References: the Mobbin connector (real app screens and flows).
-
-**B. Build a web page, site, web app or tool UI.**
-- Lead: `atelier` (identity, layout, anti-slop rules, Stranger test).
-- With it: `atelier-fx` (motion, 3D, effects) for React or Next.js apps that need movement.
-- With it: `artifact-design` (page rules) when the output is an artifact.
-- Fallback when Atelier is missing: `frontend-design` (distinctive layout and type).
-- Parked: 21st (ready-made components).
-
-**C. Dashboard, status page, inbox, crew or ops screen.**
-- Lead: `command-center-screens` (answer first, act fast). With it: `dataviz` (chart rules) for any chart.
-- Ask: does it need to be a Dashboard artifact? If the numbers must be traceable, yes.
-
-**D. Anything 3D.**
-- What shapes and colors mean: `data-city-map`.
-- How people steer it: `steerable-3d-scene` (drag, pinch, touch).
-- Quick preview in chat: the Three.js 3D Viewer connector.
-- Web games (Three.js, React Three Fiber, Colyseus): `steerable-3d-scene`, plus the web game skill once scouting finds one.
-
-**E. Mobile app screens.**
-- Parked: Appllama (native app screens). Until switched on: `atelier` with the Mobbin connector for real-app references.
-
-**F. Images, icons, logos, hero art, product shots.**
-- Simple shapes and backgrounds: plain CSS or SVG.
-- Art as PNG or PDF: `canvas-design`.
-- Parked: Blueprint Studio (on-brand image sets), AITOPIA (image generation).
-
-**G. Video, voice, music.**
-- Code-drawn animated film with a synced soundtrack: `animation-studio`.
-- Zach's TikTok pipeline: the Hookline connector.
-- HTML video projects: the HyperFrames connector.
-- Voiceover and speech: the ElevenLabs connector.
-- Parked: AITOPIA, Abracadabrax, ManyMotions (AI footage, music, presenters); Adobe (cutting footage).
-
-**H. Static print and art pieces.**
-- Poster, flyer, one-pager to edit: the Design artifact type.
-- Art as a PNG or PDF: `canvas-design`.
-
-**I. Generative art.**
-- Quick interactive sketch: `algorithmic-art`.
-- Long-form or on-chain drop with seeds and traits: `genart:genart`.
-- Style references: Specimen Atlas.
-
-**J. Figma.** When a Figma file or figma.com link is involved, the matching `figma:` skill is required before its tool.
-
-**K. Check a design before shipping.** Use all that apply: `design:design-critique` (hierarchy, usability), `design:accessibility-review` (contrast, keyboard), `design:ux-copy` (buttons, errors, empty states). Strangers' first impression: Crucible's outside view.
-
-## Lane table: everything else
-
-| Job | Use | Not this one |
-|---|---|---|
-| Big unclear request | `intake` first (short setup questions), then route | |
-| Can't describe what I want | `sharpen` (picks instead of words) | |
-| Sharpen or fix one of my skills | `sharpen`, skill mode (guided workbench) | |
-| Which skills or packs should be on | Canopy (`canopy_overview`, `canopy_usage`) | |
-| Edit Zach's own writing | `no-ai-slop` (keeps his voice) | `humanizer` is for text with no personal voice |
-| Competitor research for a product | `product-management:competitive-brief` | `marketing:competitive-brief` is for messaging |
-| Make sense of interview or survey notes | `product-management:synthesize-research` | `design:research-synthesis` only inside a design project |
-| Spec or plan a feature | `product-management:write-spec` (clear requirements) | |
-| Score or rank leads | Parked: Sales. Ask to switch on for Herd. | `small-business:lead-triage` needs HubSpot |
-| Cold email or follow-up | `small-business:outreach-composer` (drafts outreach) | |
-| Numbers question on a dataset | `data:analyze` (answers from the data) | |
-| Reconcile, close the month, journal entries | `finance:reconciliation`, `finance:close-management`, `finance:journal-entry` | |
-| Bills to pay, invoices to chase | `small-business:ap-processor`, `small-business:invoice-chase` | |
-| Process docs, vendor reviews, runbooks | `operations:process-doc`, `operations:vendor-review`, `operations:runbook` | |
-| Find something across email, docs and chat | `enterprise-search:search` (one search, all sources) | |
-| Code review before merge | `engineering:code-review` (catches bugs before shipping) | |
-| Something broke | `engineering:debug` (finds the cause) | |
-| Architecture or system design | `engineering:system-design` (structure and tradeoffs) | |
-| Build or change an app, API, login or deploy | `build-standards` (asks the safety level once per project) | |
-| Pick the model and effort for a big job | `model-router` (cheapest model that keeps quality) | |
-| Is this idea worth building | Crucible `crucible_reality_check` (Build, Reshape or Skip) | |
-| Plan a decision together | `grill-me` (rounds of questions with recommendations) | `intake` is for quick setup questions |
-| Chat is long or moving to Claude Code | `handoff` | |
-| Lost my place, wrap up, resume | `save-point` | |
-| What is unfinished | `loose-ends` | |
-| Social posts on a schedule | `postiz:postiz` (posts to 28 platforms) | |
+## Keeping the tables fresh
+Once a week (during Crucible's scouting run or when Zach asks), propose table changes as one short before-and-after batch: new skills worth adding, skills to drop because receipts show they change nothing, and lanes that keep getting "No lane fits". Change nothing without his yes.
 
 ## When nothing fits
 Say "No lane fits this." Pick the skills that clearly add value by reading their descriptions, name them in the receipt, and suggest a new row for this table so next time is not a guess.
