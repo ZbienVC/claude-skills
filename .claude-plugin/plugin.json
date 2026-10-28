@@ -1,0 +1,24 @@
+{
+  "name": "zach-kit",
+  "displayName": "Zach's kit",
+  "description": "Zach's skills (skill-router, sharpen, model-router, handoff and more), four helper agents, and a hook that tells Canopy which skills ran.",
+  "author": {
+    "name": "Zach Bienstock"
+  },
+  "repository": "https://github.com/ZbienVC/claude-skills",
+  "skills": ["./.claude/skills/"],
+  "userConfig": {
+    "canopy_url": {
+      "type": "string",
+      "title": "Canopy address",
+      "description": "Your Switchyard address. Leave it as is unless Switchyard moves.",
+      "default": "https://switchyard-production-02d8.up.railway.app"
+    },
+    "canopy_key": {
+      "type": "string",
+      "title": "Canopy key",
+      "description": "The CANOPY_KEY set on Switchyard in Railway. Leave it empty to skip the skill-use log on this computer.",
+      "sensitive": true
+    }
+  }
+}

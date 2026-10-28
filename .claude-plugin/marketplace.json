@@ -1,0 +1,14 @@
+{
+  "name": "zbien-skills",
+  "description": "Zach's own Claude skills, helper agents and hooks, in one place.",
+  "owner": {
+    "name": "Zach Bienstock"
+  },
+  "plugins": [
+    {
+      "name": "zach-kit",
+      "source": "./",
+      "description": "Zach's skills (skill-router, sharpen, model-router, handoff and more), four helper agents, and the Canopy skill-use log."
+    }
+  ]
+}

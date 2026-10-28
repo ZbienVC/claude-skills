@@ -33,7 +33,7 @@ End every reply that used a skill with one line:
 
 > Skills used: atelier (picked the look and type), dataviz (chart colors). Skipped: frontend-design (atelier covers it). Parked but would help: sales (lead routing for Herd).
 
-If a skill was loaded but changed nothing, say that too. When the Canopy connector is in the session, also send the receipt to `canopy_log_use` (one row per skill: name, what it did, `changed: false` when it changed nothing). In Claude Code, a hook logs uses automatically, so only the line is needed.
+If a skill was loaded but changed nothing, say that too. When the Canopy connector is in the session, also send the receipt to `canopy_log_use` (one row per skill: name, what it did, `changed: false` when it changed nothing). In Claude Code with the zach-kit plugin installed, a hook logs uses automatically, so only the line is needed.
 
 ## Recipes come first
 If the job matches a recipe in `references/recipes.md`, follow it step by step: shipping a feature in one of Zach's apps, starting a new product idea, or something broken in a live app. Recipes have a short "small run" for jobs of about an hour or less.
