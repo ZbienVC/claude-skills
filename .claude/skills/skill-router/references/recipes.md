@@ -1,6 +1,6 @@
 # Workflow recipes
 
-Step-by-step skill plans for the jobs Zach repeats most where skills pay off most. When a job matches a recipe, follow it step by step instead of picking lanes one at a time. Announce the recipe in one line at the start ("Recipe: ship a feature, full run"), and name each step's skills as you reach it.
+Step-by-step skill plans for the jobs Zach repeats most where skills pay off most. When a job matches a recipe, follow it step by step instead of picking skills one at a time. Announce the recipe in one line at the start ("Recipe: ship a feature, full run"), and name each step's skills as you reach it.
 
 **Small jobs** (about an hour or less) run only the steps marked **(small)**. Say "small run" in the one-line plan.
 

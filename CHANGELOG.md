@@ -3,6 +3,7 @@
 A running list of what changed in this repo and when. Newest entries go at the top.
 
 ## 2026-10-28
+- skill-router is now a short rule instead of a lookup table: Claude picks from the skills it already sees by name and description, reads a missing one (like Atelier in chat) through Canopy, and keeps Zach's house picks, the recipes, the parked list and the receipt. Removed `references/lanes-design.md` and `references/lanes-other.md`.
 - The repo is now a plugin marketplace with one plugin, `zach-kit` (all skills, the four agents and both hooks). Add it once on claude.ai (Customize, Plugins, Add marketplace) and it syncs to every device; no more copying files per computer. The Canopy skill-use hook now reads the key Claude Code asks for when the plugin is turned on.
 - Added auto-routing for Claude Code: `hooks/route-big-tasks.mjs` (reminds Claude to load skill-router, and sharpen on feel words, when a message looks like a big task) and `claude-code/CLAUDE.user.md` (standing rules to copy into `~/.claude/CLAUDE.md`). Added `skill-router` to the repo.
 - skill-router: split into a short core plus lookup tables (about half the size per use), added a safety valve for skills that change nothing, a weekly table refresh, and 3 workflow recipes (ship a feature, start a new product idea, something broke).
