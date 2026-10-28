@@ -35,12 +35,16 @@ End every reply that used a skill with one line:
 
 If a skill was loaded but changed nothing, say that too. When the Canopy connector is in the session, also send the receipt to `canopy_log_use` (one row per skill: name, what it did, `changed: false` when it changed nothing). In Claude Code, a hook logs uses automatically, so only the line is needed.
 
+## Recipes come first
+If the job matches a recipe in `references/recipes.md`, follow it step by step: shipping a feature in one of Zach's apps, starting a new product idea, or something broken in a live app. Recipes have a short "small run" for jobs of about an hour or less.
+
 ## The lookup tables (read only the one you need)
 - `references/lanes-design.md`: anything Zach will look at (pages, apps, dashboards, 3D, images, video, print, art, Figma, design checks).
 - `references/lanes-other.md`: writing, research, planning, finance and ops, engineering, workflows.
 - `references/parked.md`: when a job might match a pack that is switched off on purpose.
+- `references/recipes.md`: step-by-step skill plans for the 3 recipes above.
 
-Open one file, find the lane, and stop reading. Do not load all three for one task.
+Open one file, find the lane, and stop reading. Do not load them all for one task.
 
 ## Safety valve
 Receipts are evidence. Before using a skill, check Canopy (`canopy_usage`) when it is in the session: if that skill was logged as "changed nothing" twice on the same kind of task, skip it for this task type and say so in the receipt ("Skipped: X, changed nothing the last 2 times on this kind of task"). Zach can say "bring it back" anytime.

@@ -3,6 +3,7 @@
 A running list of what changed in this repo and when. Newest entries go at the top.
 
 ## 2026-10-28
+- skill-router: split into a short core plus lookup tables (about half the size per use), added a safety valve for skills that change nothing, a weekly table refresh, and 3 workflow recipes (ship a feature, start a new product idea, something broke).
 - Sharpen's skill mode is now a guided 5-step skill workbench: pick a skill, see its health card, pick a goal, walk through fixes in small screens, then review and save. Description now also triggers on "work on my skills".
 
 ## 2026-10-27
