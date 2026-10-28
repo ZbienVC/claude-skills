@@ -1,6 +1,6 @@
 ---
 name: sharpen
-description: Turns Zach's vague words into exact terms he picks from, then hands Claude a precise brief. Use when a request for a look, motion, screen, 3D scene or system structure leans on feel words or placeholders ("make it pop", "a swirl thing", "kind of dramatic", "clean and modern", "something like that"), and when Zach says "/sharpen", "sharpen this", "what's the word for" or "I can't describe it". Also sharpens a skill's own instructions on "sharpen my skill". Do not use for requests that are already specific, bug fixes or quick questions, or for tightening prose (use no-ai-slop).
+description: Turns Zach's vague words into exact terms he picks from, then hands Claude a precise brief. Use when a request for a look, motion, screen, 3D scene or system structure leans on feel words or placeholders ("make it pop", "a swirl thing", "kind of dramatic", "clean and modern", "something like that"), and when Zach says "/sharpen", "sharpen this", "what's the word for" or "I can't describe it". Also runs a guided skill workbench on "sharpen my skill" or "work on my skills". Do not use for requests that are already specific, bug fixes or quick questions, or for tightening prose (use no-ai-slop).
 ---
 
 # Sharpen
@@ -9,7 +9,7 @@ Zach knows what he wants when he sees it, but often not the word for it. Sharpen
 
 Two modes:
 - **Sharpen a request** (most of the time). Steps below.
-- **Sharpen a skill.** Zach says "sharpen my <skill> skill" or a Canopy or Crucible suggestion points at one. Follow `references/sharpen-a-skill.md`.
+- **Skill workbench.** Zach says "sharpen my <skill> skill", "work on my skills" or "skill workbench", or Canopy, Crucible or the router points at a skill that never fires or does not help. Follow the guided walkthrough in `references/sharpen-a-skill.md`.
 
 ## When to step in
 Step in when the request is about how something looks, moves, is laid out, behaves, or is structured, and at least one phrase would make two good builders produce clearly different things. Typical signs:
