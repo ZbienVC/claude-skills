@@ -26,7 +26,7 @@ try {
   const looksBig = words >= 25 || (words >= 8 && BIG.test(prompt));
 
   if (looksBig && !SKIP.test(prompt)) {
-    const notes = ["This looks like a big task: load the skill-router skill first and follow it (say the lane and skills in one line before the first tool call)."];
+    const notes = ["This looks like a big task: load the skill-router skill first and follow it (say the skills you will use in one line before the first tool call)."];
     if (VAGUE.test(prompt)) notes.push("The request uses feel words: run the sharpen skill before building.");
     process.stdout.write(
       JSON.stringify({ hookSpecificOutput: { hookEventName: "UserPromptSubmit", additionalContext: notes.join(" ") } })
