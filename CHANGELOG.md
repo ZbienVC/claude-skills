@@ -2,6 +2,9 @@
 
 A running list of what changed in this repo and when. Newest entries go at the top.
 
+## 2026-10-29
+- Added the arena skill (`.claude/skills/arena/`), copied unchanged from Jake Schincariol's arena-skill at commit df07b8e (MIT license kept in the folder). Runs a tournament of helper agents on one task. Works in Claude Code; chat can't launch the helper agents it needs.
+
 ## 2026-10-28
 - skill-router is now a short rule instead of a lookup table: Claude picks from the skills it already sees by name and description, reads a missing one (like Atelier in chat) through Canopy, and keeps Zach's house picks, the recipes, the parked list and the receipt. Removed `references/lanes-design.md` and `references/lanes-other.md`.
 - The repo is now a plugin marketplace with one plugin, `zach-kit` (all skills, the four agents and both hooks). Add it once on claude.ai (Customize, Plugins, Add marketplace) and it syncs to every device; no more copying files per computer. The Canopy skill-use hook now reads the key Claude Code asks for when the plugin is turned on.

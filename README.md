@@ -14,6 +14,7 @@ Zach's own Claude skills and a Claude Code agent pack. The goal of everything he
 | `.claude/skills/command-center-screens/` | Layouts for status, inbox and crew pages that answer "what is wrong and what do I do first" fast: ranked lists, flick cards, one gauge strip. |
 | `.claude/skills/skill-router/` | Picks the right skills for a big task from a lookup table, uses every one that adds value, suggests more as the work changes, and ends with a receipt. |
 | `claude-code/CLAUDE.user.md` | Zach's standing rules for Claude Code (auto-routing, case against, writing rules), to copy into `~/.claude/CLAUDE.md`. |
+| `.claude/skills/arena/` | Makes many copies of Claude (100, or 16 with `--quick`) answer the same task with different strategies, attack each other, and get judged in a bracket until one answer is left. Claude Code only (needs Python and helper agents). Copied unchanged from Jake Schincariol's arena-skill (MIT); see `SOURCE.md` in its folder. |
 | `.claude/skills/sharpen/` | Turns vague words in a request ("a swirl thing", "make it pop") into exact terms you pick from, then writes a precise brief to build from. Also sharpens a skill's own instructions with you. Comes with a starter library, a per-project house rules file (`SHARPEN.md`) and a glossary format. |
 | `agents/` | Four Claude Code helpers (subagents), each locked to a model and effort level. |
 | `.claude-plugin/` | Makes this repo a plugin marketplace with one plugin, `zach-kit`. See "Install everything once". |
