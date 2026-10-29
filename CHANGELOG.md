@@ -3,6 +3,7 @@
 A running list of what changed in this repo and when. Newest entries go at the top.
 
 ## 2026-10-29
+- arena: rewrote the skill's description so it scores 100 in Canopy (was 70). It now lists phrases that should start it and says not to use it for a quick retry, since it needs Claude Code and costs 91 to 595 sub-agent calls.
 - Added the arena skill (`.claude/skills/arena/`), copied unchanged from Jake Schincariol's arena-skill at commit df07b8e (MIT license kept in the folder). Runs a tournament of helper agents on one task. Works in Claude Code; chat can't launch the helper agents it needs.
 
 ## 2026-10-28

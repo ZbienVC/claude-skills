@@ -1,14 +1,15 @@
 ---
 name: arena
 description: >-
-  Make 100 versions of Claude fight to the death over one task. Spins up N
-  sub-agents (default 100, --quick for 16), gives every one the exact same
-  task plus a different strategy card (reasoning mode, workflow, strategy),
-  then runs a single-elimination bracket: they attack each other's solutions,
-  defend and revise, and a judge scores every match on a written rubric until
-  one solution survives. Use when the user is not satisfied with an answer,
-  calls it a bad answer, says try again or do better, says "arena", or asks
-  to make them compete.
+  Make 100 versions of Claude fight over one task. Spins up N sub-agents
+  (default 100, --quick for 16), gives each the exact same task plus a
+  different strategy card, then runs a bracket: they attack each other's
+  answers, defend and revise, and a judge scores every match on a written
+  rubric until one answer survives. Use when the user says "arena", "make
+  them compete", "that's a bad answer", "try again, do better" or "run the
+  arena on this". Do not use for a quick retry or a small fix: it needs
+  Claude Code (Python and sub-agents) and costs 91 to 595 sub-agent calls,
+  so ask first unless the user named it.
 argument-hint: "[--agents N | --quick] [--seed S] <task>"
 ---
 

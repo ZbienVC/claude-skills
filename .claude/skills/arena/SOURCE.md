@@ -6,7 +6,9 @@
 - License: MIT. The author's license is kept next to the skill in `LICENSE`, as MIT requires.
 
 ## What was copied
-`SKILL.md`, `bracket.py`, `rubric.md` and `strategies.json` from `skills/arena/`, unchanged.
+`SKILL.md`, `bracket.py`, `rubric.md` and `strategies.json` from `skills/arena/`.
+One change since: the `description` line at the top of `SKILL.md` was rewritten on 2026-10-29
+so it scores 100 in Canopy (example phrases and a "do not use" line). Nothing else differs.
 The author's tests and plugin files were left out because this kit already is the plugin.
 
 ## Safety check done before copying (2026-10-29)
