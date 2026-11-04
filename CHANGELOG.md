@@ -2,6 +2,9 @@
 
 A running list of what changed in this repo and when. Newest entries go at the top.
 
+## 2026-11-04
+- Added the awwwards skill (`.claude/skills/awwwards/`), copied unchanged from Julio Barbosa's juliobsz/skills at commit add880b (MIT license kept in the folder). Builds award-level showcase sites: three concepts, one build, real-browser screenshots and a fresh critic each pass until every category scores 8 or more. Overlaps with Atelier on websites, so Atelier stays the default design skill.
+
 ## 2026-10-29
 - arena: rewrote the skill's description so it scores 100 in Canopy (was 70). It now lists phrases that should start it and says not to use it for a quick retry, since it needs Claude Code and costs 91 to 595 sub-agent calls.
 - Added the arena skill (`.claude/skills/arena/`), copied unchanged from Jake Schincariol's arena-skill at commit df07b8e (MIT license kept in the folder). Runs a tournament of helper agents on one task. Works in Claude Code; chat can't launch the helper agents it needs.
